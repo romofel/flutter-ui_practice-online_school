@@ -34,24 +34,27 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Hello Masum',
-                  style: GoogleFonts.lexendExa(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                Text('Welcome to online school',
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Hello Masum',
                     style: GoogleFonts.lexendExa(
-                      color: const Color(0xff260404).withOpacity(.70),
-                      fontSize: 12,
-                      fontWeight: FontWeight.w300,
-                    )),
-              ],
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text('Welcome to online school',
+                      style: GoogleFonts.lexendExa(
+                        color: const Color(0xff260404).withOpacity(.70),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w300,
+                      )),
+                ],
+              ),
             ),
           ],
         ),
