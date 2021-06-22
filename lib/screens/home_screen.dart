@@ -32,6 +32,12 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Column(
+              children: [
+                Text('Hello Masum'),
+                Text('Welcome to online school'),
+              ],
+            ),
           ],
         ),
       ),
