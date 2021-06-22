@@ -85,6 +85,14 @@ class HomeScreen extends StatelessWidget {
                           ),
                           Container(
                             child: Text('Get Started'),
+                            child: Text(
+                              'Get Started',
+                              style: GoogleFonts.lexendExa(
+                                color: Colors.black,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
                           ),
                         ],
                       ),
