@@ -66,17 +66,28 @@ class HomeScreen extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    const Image(
-                      image: AssetImage('assets/images/hero_girl.png'),
-                      fit: BoxFit.cover,
+                    const Expanded(
+                      child: Image(
+                        image: AssetImage('assets/images/hero_girl.png'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    Column(
-                      children: [
-                        Text('What do you want to learn today?'),
-                        Container(
-                          child: Text('Get Started'),
-                        ),
-                      ],
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Text(
+                            'What do you want to learn today?',
+                            style: GoogleFonts.lexendExa(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Container(
+                            child: Text('Get Started'),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
