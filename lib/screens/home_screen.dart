@@ -9,23 +9,28 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Icon(Icons.menu),
-                Container(
-                  width: 32,
-                  height: 32,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffEFEFEF),
-                    borderRadius: BorderRadius.circular(10),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const Icon(Icons.menu),
+                  Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: const Color(0xffEFEFEF),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Image(
+                      image: AssetImage('assets/images/avatar.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  child: const Image(
-                    image: AssetImage('assets/images/avatar.png'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
