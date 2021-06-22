@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -34,8 +35,20 @@ class HomeScreen extends StatelessWidget {
             ),
             Column(
               children: [
-                Text('Hello Masum'),
-                Text('Welcome to online school'),
+                Text(
+                  'Hello Masum',
+                  style: GoogleFonts.lexendExa(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Text('Welcome to online school',
+                    style: GoogleFonts.lexendExa(
+                      color: const Color(0xff260404).withOpacity(.70),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300,
+                    )),
               ],
             ),
           ],
