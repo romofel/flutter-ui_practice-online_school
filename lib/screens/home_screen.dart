@@ -74,9 +74,12 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Expanded(
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
                             'What do you want to learn today?',
+                            textAlign: TextAlign.right,
                             style: GoogleFonts.lexendExa(
                               color: Colors.white,
                               fontSize: 14,
