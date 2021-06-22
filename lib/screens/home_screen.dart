@@ -87,6 +87,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
+                          const SizedBox(height: 24),
                           Container(
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 24, vertical: 16),
