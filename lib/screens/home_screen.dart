@@ -10,6 +10,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Icon(Icons.menu),
                 Container(
