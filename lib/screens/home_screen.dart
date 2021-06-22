@@ -84,7 +84,12 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            child: Text('Get Started'),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 24, vertical: 16),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(43),
+                            ),
                             child: Text(
                               'Get Started',
                               style: GoogleFonts.lexendExa(
