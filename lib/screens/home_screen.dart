@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:online_school/data/constants.dart';
 import 'package:online_school/data/teachers.dart';
 import 'package:online_school/models/teacher.dart';
+import 'package:online_school/screens/schedule_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -49,23 +50,30 @@ class HomeScreen extends StatelessWidget {
             child: Wrap(
               spacing: 32,
               runSpacing: 16,
-              children: classes.map<Container>((String availableClass) {
-                return Container(
-                  width: MediaQuery.of(context).size.width * .4,
-                  height: 50,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                  alignment: AlignmentDirectional.center,
-                  decoration: BoxDecoration(
-                    color: const Color(0xff00BBC7),
-                    borderRadius: BorderRadius.circular(15),
+              children: classes.map<GestureDetector>((String availableClass) {
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => const ScheduleScreen(),
+                    ));
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * .4,
+                    height: 50,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                    alignment: AlignmentDirectional.center,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff00BBC7),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Text(availableClass,
+                        style: GoogleFonts.lexendExa(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        )),
                   ),
-                  child: Text(availableClass,
-                      style: GoogleFonts.lexendExa(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      )),
                 );
               }).toList(),
             ),
