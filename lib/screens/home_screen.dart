@@ -41,6 +41,7 @@ class HomeScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: const Color(0xff00BBC7),
                     ),
+                    child: Text(availableClass),
                   );
                 }).toList(),
               ),
