@@ -36,6 +36,16 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+      const SizedBox(height: 16),
+      Container(
+        height: 56,
+        padding: const EdgeInsets.only(left: 24),
+        child: ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            return Container();
+          },
+        ),
+      ),
     ];
   }
 
