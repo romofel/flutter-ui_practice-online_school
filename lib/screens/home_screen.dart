@@ -57,8 +57,16 @@ class HomeScreen extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          decoration: BoxDecoration(
+          width: 118,
+          height: 104,
+          decoration: const BoxDecoration(
             color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+              bottomLeft: Radius.circular(20),
+              bottomRight: Radius.circular(20),
+            ),
           ),
           child: Column(
             children: [
