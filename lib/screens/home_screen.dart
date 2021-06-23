@@ -40,9 +40,10 @@ class HomeScreen extends StatelessWidget {
       ),
       const SizedBox(height: 16),
       Container(
-        height: 56,
+        height: 96,
         padding: const EdgeInsets.only(left: 24),
         child: ListView.builder(
+          scrollDirection: Axis.horizontal,
           itemCount: teachers.length,
           itemBuilder: (BuildContext context, int index) {
             return _buildTutorOption(teachers[index]);
@@ -53,7 +54,21 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildTutorOption(Teacher teacher) {
-    return Container();
+    return Stack(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+          ),
+          child: Column(
+            children: [
+              Text(teacher.name),
+              Text(teacher.title),
+            ],
+          ),
+        ),
+      ],
+    );
   }
 
   Padding _buildHeroSection() {
