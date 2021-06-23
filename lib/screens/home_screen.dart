@@ -16,18 +16,22 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 24),
             _buildHeroSection(),
             const SizedBox(height: 24),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Text(
-                'Popular Tutor',
-                style: GoogleFonts.lexendExa(
-                  color: const Color(0xff260404),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
+            _buildTutorListSection(),
           ],
+        ),
+      ),
+    );
+  }
+
+  Padding _buildTutorListSection() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: Text(
+        'Popular Tutor',
+        style: GoogleFonts.lexendExa(
+          color: const Color(0xff260404),
+          fontSize: 18,
+          fontWeight: FontWeight.w500,
         ),
       ),
     );
