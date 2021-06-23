@@ -29,7 +29,19 @@ class HomeScreen extends StatelessWidget {
   }
 
   List<Widget> _buildScheduleSection() {
-    return [];
+    return [
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Text(
+          'Class Schedule',
+          style: GoogleFonts.lexendExa(
+            color: const Color(0xff260404),
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      )
+    ];
   }
 
   List<Widget> _buildTutorListSection() {
