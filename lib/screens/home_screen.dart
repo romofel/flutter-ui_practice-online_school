@@ -33,19 +33,17 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Container(
-                  color: Colors.pink,
-                  child: GridView.count(
-                    crossAxisCount: 2,
-                    children: [
-                      Text('hi'),
-                      Text('hi'),
-                      Text('hi'),
-                      Text('hi'),
-                      Text('hi'),
-                      Text('hi'),
-                    ],
-                  )),
+              child: Wrap(
+                children: classes.map<Container>((String availableClass) {
+                  return Container(
+                    width: 156,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff00BBC7),
+                    ),
+                  );
+                }).toList(),
+              ),
             ),
             // ..._buildScheduleSection(),
           ],
