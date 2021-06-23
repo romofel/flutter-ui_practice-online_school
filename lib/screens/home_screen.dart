@@ -47,7 +47,9 @@ class HomeScreen extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemCount: 3,
           itemBuilder: (BuildContext context, int index) {
-            return _buildTutorOption(teachers[index], gradients[index]);
+            return Container(
+                margin: const EdgeInsets.only(right: 24),
+                child: _buildTutorOption(teachers[index], gradients[index]));
           },
         ),
       ),
