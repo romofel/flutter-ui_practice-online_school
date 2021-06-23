@@ -21,73 +21,57 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 24),
             ..._buildTutorListSection(),
             const SizedBox(height: 24),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Text(
-                'Class Schedule',
-                style: GoogleFonts.lexendExa(
-                  color: const Color(0xff260404),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            const SizedBox(height: 16),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: SingleChildScrollView(
-                  child: Wrap(
-                    spacing: 32,
-                    runSpacing: 16,
-                    children: classes.map<Container>((String availableClass) {
-                      return Container(
-                        width: MediaQuery.of(context).size.width * .4,
-                        height: 50,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 8, vertical: 2),
-                        alignment: AlignmentDirectional.center,
-                        decoration: BoxDecoration(
-                          color: const Color(0xff00BBC7),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Text(availableClass,
-                            style: GoogleFonts.lexendExa(
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                            )),
-                      );
-                    }).toList(),
-                  ),
-                ),
-              ),
-            ),
-            // ..._buildScheduleSection(),
+            ..._buildScheduleSection(context),
           ],
         ),
       ),
     );
   }
 
-  List<Widget> _buildScheduleSection() {
+  List<Widget> _buildScheduleSection(BuildContext context) {
     return [
-      // Padding(
-      //   padding: const EdgeInsets.symmetric(horizontal: 24),
-      //   child: SingleChildScrollView(
-      //     child: GridView.count(
-      //       crossAxisCount: 2,
-      //       children: [
-      //         Text('one'),
-      //         Text('one'),
-      //         Text('one'),
-      //         Text('one'),
-      //         Text('one'),
-      //         Text('one'),
-      //       ],
-      //     ),
-      //   ),
-      // ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Text(
+          'Class Schedule',
+          style: GoogleFonts.lexendExa(
+            color: const Color(0xff260404),
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+      const SizedBox(height: 16),
+      Expanded(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: SingleChildScrollView(
+            child: Wrap(
+              spacing: 32,
+              runSpacing: 16,
+              children: classes.map<Container>((String availableClass) {
+                return Container(
+                  width: MediaQuery.of(context).size.width * .4,
+                  height: 50,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                  alignment: AlignmentDirectional.center,
+                  decoration: BoxDecoration(
+                    color: const Color(0xff00BBC7),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Text(availableClass,
+                      style: GoogleFonts.lexendExa(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      )),
+                );
+              }).toList(),
+            ),
+          ),
+        ),
+      ),
     ];
   }
 
