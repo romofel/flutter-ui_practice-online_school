@@ -21,7 +21,33 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 24),
             ..._buildTutorListSection(),
             const SizedBox(height: 24),
-            ..._buildScheduleSection(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Text(
+                'Class Schedule',
+                style: GoogleFonts.lexendExa(
+                  color: const Color(0xff260404),
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                  color: Colors.pink,
+                  child: GridView.count(
+                    crossAxisCount: 2,
+                    children: [
+                      Text('hi'),
+                      Text('hi'),
+                      Text('hi'),
+                      Text('hi'),
+                      Text('hi'),
+                      Text('hi'),
+                    ],
+                  )),
+            ),
+            // ..._buildScheduleSection(),
           ],
         ),
       ),
@@ -30,17 +56,22 @@ class HomeScreen extends StatelessWidget {
 
   List<Widget> _buildScheduleSection() {
     return [
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: Text(
-          'Class Schedule',
-          style: GoogleFonts.lexendExa(
-            color: const Color(0xff260404),
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      )
+      // Padding(
+      //   padding: const EdgeInsets.symmetric(horizontal: 24),
+      //   child: SingleChildScrollView(
+      //     child: GridView.count(
+      //       crossAxisCount: 2,
+      //       children: [
+      //         Text('one'),
+      //         Text('one'),
+      //         Text('one'),
+      //         Text('one'),
+      //         Text('one'),
+      //         Text('one'),
+      //       ],
+      //     ),
+      //   ),
+      // ),
     ];
   }
 
