@@ -32,25 +32,33 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 16),
             Expanded(
-              child: Wrap(
-                children: classes.map<Container>((String availableClass) {
-                  return Container(
-                    width: 156,
-                    height: 50,
-                    alignment: AlignmentDirectional.center,
-                    decoration: BoxDecoration(
-                      color: const Color(0xff00BBC7),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Text(availableClass,
-                        style: GoogleFonts.lexendExa(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                        )),
-                  );
-                }).toList(),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: SingleChildScrollView(
+                  child: Wrap(
+                    spacing: 32,
+                    runSpacing: 16,
+                    children: classes.map<Container>((String availableClass) {
+                      return Container(
+                        width: 156,
+                        height: 50,
+                        alignment: AlignmentDirectional.center,
+                        decoration: BoxDecoration(
+                          color: const Color(0xff00BBC7),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Text(availableClass,
+                            style: GoogleFonts.lexendExa(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            )),
+                      );
+                    }).toList(),
+                  ),
+                ),
               ),
             ),
             // ..._buildScheduleSection(),
