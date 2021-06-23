@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
       ),
       const SizedBox(height: 16),
       Container(
-        height: 112,
+        height: 150,
         padding: const EdgeInsets.only(left: 24),
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
@@ -58,10 +58,11 @@ class HomeScreen extends StatelessWidget {
 
   Widget _buildTutorOption(Teacher teacher, LinearGradient gradient) {
     return Stack(
-      alignment: AlignmentDirectional.topCenter,
+      alignment: AlignmentDirectional.bottomCenter,
       children: [
         Container(
           width: 128,
+          height: 112,
           alignment: AlignmentDirectional.center,
           padding: const EdgeInsets.symmetric(vertical: 8),
           decoration: const BoxDecoration(
@@ -95,18 +96,22 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-            width: 74,
-            height: 74,
-            decoration: BoxDecoration(
-              color: const Color(0xffCBC4DE),
-              gradient: gradient,
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: Image(
-              image: AssetImage(teacher.image),
-              fit: BoxFit.cover,
-            )),
+        Positioned(
+          top: 0,
+          child: Container(
+              width: 80,
+              height: 80,
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                color: const Color(0xffCBC4DE),
+                gradient: gradient,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Image(
+                image: AssetImage(teacher.image),
+                fit: BoxFit.cover,
+              )),
+        ),
       ],
     );
   }
