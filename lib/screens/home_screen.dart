@@ -38,11 +38,17 @@ class HomeScreen extends StatelessWidget {
                   return Container(
                     width: 156,
                     height: 50,
+                    alignment: AlignmentDirectional.center,
                     decoration: BoxDecoration(
                       color: const Color(0xff00BBC7),
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Text(availableClass),
+                    child: Text(availableClass,
+                        style: GoogleFonts.lexendExa(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        )),
                   );
                 }).toList(),
               ),
