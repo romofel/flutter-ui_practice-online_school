@@ -20,10 +20,16 @@ class HomeScreen extends StatelessWidget {
             _buildHeroSection(),
             const SizedBox(height: 24),
             ..._buildTutorListSection(),
+            const SizedBox(height: 24),
+            ..._buildScheduleSection(),
           ],
         ),
       ),
     );
+  }
+
+  List<Widget> _buildScheduleSection() {
+    return [];
   }
 
   List<Widget> _buildTutorListSection() {
