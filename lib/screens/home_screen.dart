@@ -62,8 +62,22 @@ class HomeScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Text(teacher.name),
-              Text(teacher.title),
+              Text(
+                teacher.name,
+                style: GoogleFonts.lexendExa(
+                  color: const Color(0xff260404),
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              Text(
+                teacher.title,
+                style: GoogleFonts.lexendExa(
+                  color: const Color(0xff260404).withOpacity(.60),
+                  fontSize: 11,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
             ],
           ),
         ),
