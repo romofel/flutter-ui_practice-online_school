@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:online_school/data/teachers.dart';
+import 'package:online_school/models/teacher.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -41,12 +43,17 @@ class HomeScreen extends StatelessWidget {
         height: 56,
         padding: const EdgeInsets.only(left: 24),
         child: ListView.builder(
+          itemCount: teachers.length,
           itemBuilder: (BuildContext context, int index) {
-            return Container();
+            return _buildTutorOption(teachers[index]);
           },
         ),
       ),
     ];
+  }
+
+  Widget _buildTutorOption(Teacher teacher) {
+    return Container();
   }
 
   Padding _buildHeroSection() {
