@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
       alignment: AlignmentDirectional.bottomCenter,
       children: [
         Container(
-          width: 128,
+          width: 136,
           height: 112,
           alignment: AlignmentDirectional.center,
           padding: const EdgeInsets.symmetric(vertical: 8),
