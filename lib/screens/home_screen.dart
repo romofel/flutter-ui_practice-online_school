@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
       ),
       const SizedBox(height: 16),
       Container(
-        height: 96,
+        height: 112,
         padding: const EdgeInsets.only(left: 24),
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
@@ -57,8 +57,8 @@ class HomeScreen extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          width: 118,
-          height: 104,
+          width: 128,
+          padding: const EdgeInsets.symmetric(vertical: 8),
           decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
@@ -69,6 +69,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Text(
                 teacher.name,
