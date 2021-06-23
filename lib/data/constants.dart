@@ -1,5 +1,18 @@
 import 'package:flutter/painting.dart';
 
+const classes = <String>[
+  'UI/UX Design',
+  'Graphic Design',
+  'Marketing',
+  '3d Illustration',
+  'Web Development',
+  'Retaching',
+  'Salesman',
+  'Artisan',
+  'Tailor',
+  'Tanner',
+];
+
 final gradients = <LinearGradient>[
   const LinearGradient(
     colors: [
