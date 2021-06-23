@@ -42,8 +42,10 @@ class HomeScreen extends StatelessWidget {
                     runSpacing: 16,
                     children: classes.map<Container>((String availableClass) {
                       return Container(
-                        width: 156,
+                        width: MediaQuery.of(context).size.width * .4,
                         height: 50,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 2),
                         alignment: AlignmentDirectional.center,
                         decoration: BoxDecoration(
                           color: const Color(0xff00BBC7),
