@@ -59,57 +59,65 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 24),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Container(
-                height: 168,
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                decoration: BoxDecoration(
-                  color: const Color(0xff00BBC7),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Row(
-                  children: [
-                    const Expanded(
-                      child: Image(
-                        image: AssetImage('assets/images/hero_girl.png'),
-                        fit: BoxFit.cover,
-                      ),
+              child: Stack(
+                alignment: AlignmentDirectional.bottomStart,
+                children: [
+                  Container(
+                    height: 168,
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    decoration: BoxDecoration(
+                      color: const Color(0xff00BBC7),
+                      borderRadius: BorderRadius.circular(15),
                     ),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Text(
-                            'What do you want to learn today?',
-                            textAlign: TextAlign.right,
-                            style: GoogleFonts.lexendExa(
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          const SizedBox(height: 24),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 24, vertical: 16),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(43),
-                            ),
-                            child: Text(
-                              'Get Started',
-                              style: GoogleFonts.lexendExa(
-                                color: Colors.black,
-                                fontSize: 11,
-                                fontWeight: FontWeight.w500,
+                    child: Row(
+                      children: [
+                        const Spacer(),
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text(
+                                'What do you want to learn today?',
+                                textAlign: TextAlign.right,
+                                style: GoogleFonts.lexendExa(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
-                            ),
+                              const SizedBox(height: 24),
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 24, vertical: 16),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(43),
+                                ),
+                                child: Text(
+                                  'Get Started',
+                                  style: GoogleFonts.lexendExa(
+                                    color: Colors.black,
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 24),
+                    child: Image(
+                      image: AssetImage('assets/images/hero_girl.png'),
+                      fit: BoxFit.cover,
+                      height: 200,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
