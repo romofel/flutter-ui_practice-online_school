@@ -120,6 +120,10 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Text('Popular Tutor'),
+            ),
           ],
         ),
       ),
