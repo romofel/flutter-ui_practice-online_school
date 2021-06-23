@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:online_school/data/constants.dart';
 import 'package:online_school/data/teachers.dart';
 import 'package:online_school/models/teacher.dart';
 
@@ -44,16 +45,16 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.only(left: 24),
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: teachers.length,
+          itemCount: 3,
           itemBuilder: (BuildContext context, int index) {
-            return _buildTutorOption(teachers[index]);
+            return _buildTutorOption(teachers[index], gradients[index]);
           },
         ),
       ),
     ];
   }
 
-  Widget _buildTutorOption(Teacher teacher) {
+  Widget _buildTutorOption(Teacher teacher, LinearGradient gradient) {
     return Stack(
       children: [
         Container(
@@ -90,6 +91,18 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
+        Container(
+            width: 74,
+            height: 74,
+            decoration: BoxDecoration(
+              color: const Color(0xffCBC4DE),
+              gradient: gradient,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Image(
+              image: AssetImage(teacher.image),
+              fit: BoxFit.cover,
+            )),
       ],
     );
   }
