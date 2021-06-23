@@ -58,9 +58,11 @@ class HomeScreen extends StatelessWidget {
 
   Widget _buildTutorOption(Teacher teacher, LinearGradient gradient) {
     return Stack(
+      alignment: AlignmentDirectional.topCenter,
       children: [
         Container(
           width: 128,
+          alignment: AlignmentDirectional.center,
           padding: const EdgeInsets.symmetric(vertical: 8),
           decoration: const BoxDecoration(
             color: Colors.white,
