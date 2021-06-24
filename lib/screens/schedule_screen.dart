@@ -20,80 +20,89 @@ class ScheduleScreen extends StatelessWidget {
 
   Expanded _buildInstructorListSection() {
     return Expanded(
-      child: ListView(
-        children:
-            teachers.getRange(3, teachers.length).map<Row>((Teacher teacher) {
-          return Row(
-            children: [
-              Stack(
-                alignment: AlignmentDirectional.center,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: ListView(
+          children: teachers
+              .getRange(3, teachers.length)
+              .map<Container>((Teacher teacher) {
+            return Container(
+              margin: const EdgeInsets.only(bottom: 24),
+              child: Row(
                 children: [
-                  Container(
-                    width: 74,
-                    height: 86,
-                    decoration: BoxDecoration(
-                      color: const Color(0xffEBEBEB),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                  Stack(
+                    alignment: AlignmentDirectional.center,
+                    children: [
+                      Container(
+                        width: 74,
+                        height: 86,
+                        decoration: BoxDecoration(
+                          color: const Color(0xffEBEBEB),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        child: Image(
+                          image: AssetImage(teacher.image),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      const Image(
+                        image: AssetImage('assets/images/playbutton.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ],
                   ),
-                  Positioned(
-                    bottom: 0,
-                    child: Image(
-                      image: AssetImage(teacher.image),
-                      fit: BoxFit.cover,
-                    ),
+                  const SizedBox(width: 16),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('${teacher.title} ${teacher.badge} Badge',
+                          style: GoogleFonts.lexendExa(
+                            color: Colors.black.withOpacity(.6),
+                            fontSize: 11,
+                            fontWeight: FontWeight.w400,
+                          )),
+                      Text('By ${teacher.name}',
+                          style: GoogleFonts.lexendExa(
+                            color: Colors.black,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w500,
+                          )),
+                      Text(
+                          '${teacher.start?.toStringAsFixed(2)} - ${teacher.end?.toStringAsFixed(2)}',
+                          style: GoogleFonts.lexendExa(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                          ))
+                    ],
                   ),
-                  const Image(
-                    image: AssetImage('assets/images/playbutton.png'),
-                    fit: BoxFit.cover,
+                  const Spacer(),
+                  GestureDetector(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 8),
+                      decoration: BoxDecoration(
+                        color: const Color(0xff00BBC7),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Text(
+                        'Join',
+                        style: GoogleFonts.lexendExa(
+                          color: Colors.white,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('${teacher.title} ${teacher.badge} Badge',
-                      style: GoogleFonts.lexendExa(
-                        color: Colors.black.withOpacity(.6),
-                        fontSize: 11,
-                        fontWeight: FontWeight.w400,
-                      )),
-                  Text('By ${teacher.name}',
-                      style: GoogleFonts.lexendExa(
-                        color: Colors.black,
-                        fontSize: 11,
-                        fontWeight: FontWeight.w500,
-                      )),
-                  Text(
-                      '${teacher.start?.toStringAsFixed(2)} - ${teacher.end?.toStringAsFixed(2)}',
-                      style: GoogleFonts.lexendExa(
-                        color: Colors.black,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ))
-                ],
-              ),
-              GestureDetector(
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: const Color(0xff00BBC7),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Text(
-                    'Join',
-                    style: GoogleFonts.lexendExa(
-                      color: Colors.white,
-                      fontSize: 11,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          );
-        }).toList(),
+            );
+          }).toList(),
+        ),
       ),
     );
   }
