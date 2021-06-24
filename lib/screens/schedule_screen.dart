@@ -60,6 +60,7 @@ class ScheduleScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  _buildWeekdays(),
                 ],
               ),
             ),
@@ -69,6 +70,26 @@ class ScheduleScreen extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildWeekdays() {
+    final style = GoogleFonts.lexendExa(
+      color: Colors.black,
+      fontSize: 11,
+      fontWeight: FontWeight.w500,
+    );
+
+    return Row(
+      children: [
+        Text('Mon', style: style),
+        Text('Tue', style: style),
+        Text('Wed', style: style),
+        Text('Thu', style: style),
+        Text('Fri', style: style),
+        Text('Sat', style: style),
+        Text('Sun', style: style),
+      ],
     );
   }
 }
