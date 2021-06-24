@@ -39,6 +39,10 @@ class ScheduleScreen extends StatelessWidget {
                     image: AssetImage(teacher.image),
                     fit: BoxFit.cover,
                   ),
+                  Image(
+                    image: AssetImage('assets/images/playbutton.png'),
+                    fit: BoxFit.cover,
+                  ),
                 ],
               ),
               Column(
