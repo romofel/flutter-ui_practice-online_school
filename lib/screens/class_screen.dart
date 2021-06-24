@@ -144,6 +144,38 @@ class ClassScreen extends StatelessWidget {
               height: 48,
             ),
           ),
+          Column(
+            children: [
+              Row(
+                children: [
+                  const Image(
+                    image: AssetImage('assets/images/chat_avatar1.png'),
+                    fit: BoxFit.cover,
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        'Nima Rane',
+                        style: GoogleFonts.lexendExa(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      Text(
+                        'Hi',
+                        style: GoogleFonts.lexendExa(
+                          color: Colors.white.withOpacity(.6),
+                          fontSize: 11,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ],
       ),
     );
