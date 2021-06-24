@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:online_school/data/teachers.dart';
 import 'package:online_school/models/teacher.dart';
+import 'package:online_school/screens/class_screen.dart';
 
 class ScheduleScreen extends StatelessWidget {
   const ScheduleScreen({Key? key}) : super(key: key);
@@ -12,13 +13,13 @@ class ScheduleScreen extends StatelessWidget {
       body: Column(
         children: [
           _buildTopSection(context),
-          _buildInstructorListSection(),
+          _buildInstructorListSection(context),
         ],
       ),
     );
   }
 
-  Expanded _buildInstructorListSection() {
+  Expanded _buildInstructorListSection(BuildContext context) {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -81,6 +82,8 @@ class ScheduleScreen extends StatelessWidget {
                   ),
                   const Spacer(),
                   GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => const ClassScreen())),
                     child: Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 12, vertical: 8),
