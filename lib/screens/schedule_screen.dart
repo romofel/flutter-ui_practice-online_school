@@ -16,6 +16,22 @@ class ScheduleScreen extends StatelessWidget {
                   bottomLeft: Radius.circular(32),
                   bottomRight: Radius.circular(32)),
             ),
+            child: SafeArea(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        child: IconButton(
+                          icon: Icon(Icons.arrow_back_ios),
+                          onPressed: () => Navigator.of(context).pop(),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
           Expanded(
             child: ListView(),
