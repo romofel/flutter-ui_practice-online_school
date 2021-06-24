@@ -28,6 +28,8 @@ class ScheduleScreen extends StatelessWidget {
               // Column(),
               GestureDetector(
                 child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                   decoration: BoxDecoration(
                     color: const Color(0xff00BBC7),
                     borderRadius: BorderRadius.circular(10),
