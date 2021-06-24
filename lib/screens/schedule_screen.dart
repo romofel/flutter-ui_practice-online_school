@@ -26,6 +26,7 @@ class ScheduleScreen extends StatelessWidget {
           return Row(
             children: [
               Stack(
+                alignment: AlignmentDirectional.center,
                 children: [
                   Container(
                     width: 74,
@@ -35,11 +36,14 @@ class ScheduleScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  Image(
-                    image: AssetImage(teacher.image),
-                    fit: BoxFit.cover,
+                  Positioned(
+                    bottom: 0,
+                    child: Image(
+                      image: AssetImage(teacher.image),
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  Image(
+                  const Image(
                     image: AssetImage('assets/images/playbutton.png'),
                     fit: BoxFit.cover,
                   ),
