@@ -22,7 +22,28 @@ class ScheduleScreen extends StatelessWidget {
     return Expanded(
       child: ListView(
         children: teachers.map<Row>((Teacher teacher) {
-          return Row();
+          return Row(
+            children: [
+              // Stack(),
+              // Column(),
+              GestureDetector(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xff00BBC7),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Text(
+                    'Join',
+                    style: GoogleFonts.lexendExa(
+                      color: Colors.white,
+                      fontSize: 11,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          );
         }).toList(),
       ),
     );
