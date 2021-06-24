@@ -20,42 +20,45 @@ class ScheduleScreen extends StatelessWidget {
             child: SafeArea(
               child: Column(
                 children: [
-                  Stack(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Stack(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: IconButton(
+                            icon: Icon(Icons.chevron_left, size: 32),
+                            onPressed: () => Navigator.of(context).pop(),
+                          ),
                         ),
-                        child: IconButton(
-                          icon: Icon(Icons.chevron_left, size: 32),
-                          onPressed: () => Navigator.of(context).pop(),
-                        ),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional.center,
-                        child: Column(
-                          children: [
-                            Text(
-                              'UI/UX Design Class',
-                              style: GoogleFonts.lexendExa(
-                                color: const Color(0xff260404),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
+                        Align(
+                          alignment: AlignmentDirectional.center,
+                          child: Column(
+                            children: [
+                              Text(
+                                'UI/UX Design Class',
+                                style: GoogleFonts.lexendExa(
+                                  color: const Color(0xff260404),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
-                            ),
-                            Text(
-                              'Schedule',
-                              style: GoogleFonts.lexendExa(
-                                color: const Color(0xff260404),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
+                              Text(
+                                'Schedule',
+                                style: GoogleFonts.lexendExa(
+                                  color: const Color(0xff260404),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
