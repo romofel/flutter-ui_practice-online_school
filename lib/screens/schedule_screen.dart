@@ -81,6 +81,7 @@ class ScheduleScreen extends StatelessWidget {
     );
 
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text('Mon', style: style),
         Text('Tue', style: style),
