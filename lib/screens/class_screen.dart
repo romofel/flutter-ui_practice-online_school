@@ -102,7 +102,7 @@ class ClassScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 24,
+            bottom: 32,
             left: 0,
             right: 0,
             child: Container(
@@ -133,6 +133,15 @@ class ClassScreen extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+          ),
+          const Positioned(
+            bottom: 40,
+            right: 24,
+            child: Image(
+              image: AssetImage('assets/images/heart_icon.png'),
+              fit: BoxFit.cover,
+              height: 48,
             ),
           ),
         ],
