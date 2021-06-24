@@ -144,24 +144,28 @@ class ClassScreen extends StatelessWidget {
               height: 48,
             ),
           ),
-          Column(
-            children: [
-              _buildChatHistoryMessage(
-                image: 'assets/images/chat_avatar1.png',
-                name: 'Nima Rane',
-                message: 'hi',
-              ),
-              _buildChatHistoryMessage(
-                image: 'assets/images/chat_avatar2.png',
-                name: 'Arafat Hossen',
-                message: 'How are you?',
-              ),
-              _buildChatHistoryMessage(
-                image: 'assets/images/chat_avatar3.png',
-                name: 'Mis Sume',
-                message: 'Hello!',
-              ),
-            ],
+          Positioned(
+            bottom: 136,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _buildChatHistoryMessage(
+                  image: 'assets/images/chat_avatar1.png',
+                  name: 'Nima Rane',
+                  message: 'hi',
+                ),
+                _buildChatHistoryMessage(
+                  image: 'assets/images/chat_avatar2.png',
+                  name: 'Arafat Hossen',
+                  message: 'How are you?',
+                ),
+                _buildChatHistoryMessage(
+                  image: 'assets/images/chat_avatar3.png',
+                  name: 'Mis Sume',
+                  message: 'Hello!',
+                ),
+              ],
+            ),
           ),
         ],
       ),
