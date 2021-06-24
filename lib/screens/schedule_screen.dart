@@ -25,7 +25,22 @@ class ScheduleScreen extends StatelessWidget {
             teachers.getRange(3, teachers.length).map<Row>((Teacher teacher) {
           return Row(
             children: [
-              // Stack(),
+              Stack(
+                children: [
+                  Container(
+                    width: 74,
+                    height: 86,
+                    decoration: BoxDecoration(
+                      color: const Color(0xffEBEBEB),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  Image(
+                    image: AssetImage(teacher.image),
+                    fit: BoxFit.cover,
+                  ),
+                ],
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
