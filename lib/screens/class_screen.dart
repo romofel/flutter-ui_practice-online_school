@@ -105,7 +105,8 @@ class ClassScreen extends StatelessWidget {
             bottom: 24,
             left: 0,
             right: 0,
-            child: Padding(
+            child: Container(
+              margin: const EdgeInsets.only(right: 64),
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: TextField(
                 autofocus: true,
