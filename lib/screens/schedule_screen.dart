@@ -9,68 +9,71 @@ class ScheduleScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-              color: const Color(0xff00BBC7).withOpacity(.1),
-              borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(32),
-                  bottomRight: Radius.circular(32)),
-            ),
-            child: SafeArea(
-              child: Column(
+          _buildTopSection(context),
+          Expanded(
+            child: ListView(),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container _buildTopSection(BuildContext context) {
+    return Container(
+      height: 200,
+      decoration: BoxDecoration(
+        color: const Color(0xff00BBC7).withOpacity(.1),
+        borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(32), bottomRight: Radius.circular(32)),
+      ),
+      child: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Stack(
+                alignment: AlignmentDirectional.bottomStart,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Stack(
-                      alignment: AlignmentDirectional.bottomStart,
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: IconButton(
+                      icon: const Icon(Icons.chevron_left, size: 32),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional.center,
+                    child: Column(
                       children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: IconButton(
-                            icon: const Icon(Icons.chevron_left, size: 32),
-                            onPressed: () => Navigator.of(context).pop(),
+                        Text(
+                          'UI/UX Design Class',
+                          style: GoogleFonts.lexendExa(
+                            color: const Color(0xff260404),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
-                        Align(
-                          alignment: AlignmentDirectional.center,
-                          child: Column(
-                            children: [
-                              Text(
-                                'UI/UX Design Class',
-                                style: GoogleFonts.lexendExa(
-                                  color: const Color(0xff260404),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              Text(
-                                'Schedule',
-                                style: GoogleFonts.lexendExa(
-                                  color: const Color(0xff260404),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            ],
+                        Text(
+                          'Schedule',
+                          style: GoogleFonts.lexendExa(
+                            color: const Color(0xff260404),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 16),
-                  _buildWeekdays(),
                 ],
               ),
             ),
-          ),
-          Expanded(
-            child: ListView(),
-          ),
-        ],
+            const SizedBox(height: 16),
+            _buildWeekdays(),
+          ],
+        ),
       ),
     );
   }
