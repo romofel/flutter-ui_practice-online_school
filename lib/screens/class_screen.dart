@@ -156,11 +156,13 @@ class ClassScreen extends StatelessWidget {
                     name: 'Nima Rane',
                     message: 'hi',
                   ),
+                  const SizedBox(height: 16),
                   _buildChatHistoryMessage(
                     image: 'assets/images/chat_avatar2.png',
                     name: 'Arafat Hossen',
                     message: 'How are you?',
                   ),
+                  const SizedBox(height: 16),
                   _buildChatHistoryMessage(
                     image: 'assets/images/chat_avatar3.png',
                     name: 'Mis Sume',
@@ -181,13 +183,18 @@ class ClassScreen extends StatelessWidget {
     required String message,
   }) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Image(
           image: AssetImage(image),
           fit: BoxFit.cover,
+          width: 36,
+          height: 36,
         ),
+        const SizedBox(width: 8),
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               name,
