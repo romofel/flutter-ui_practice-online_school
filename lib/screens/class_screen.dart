@@ -19,6 +19,14 @@ class ClassScreen extends StatelessWidget {
           Container(
             color: const Color(0xffA1A1A1).withOpacity(.5),
           ),
+          const Align(
+            alignment: AlignmentDirectional.bottomCenter,
+            child: Image(
+              image: AssetImage('assets/images/instructor.png'),
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
+          )
         ],
       ),
     );
