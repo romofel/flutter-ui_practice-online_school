@@ -28,6 +28,23 @@ class ClassScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
+          Align(
+            alignment: AlignmentDirectional.bottomCenter,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height / 2,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    const Color(0xff020000).withOpacity(.79),
+                    const Color(0xff020000).withOpacity(0),
+                  ],
+                  begin: AlignmentDirectional.bottomCenter,
+                  end: AlignmentDirectional.topCenter,
+                ),
+              ),
+            ),
+          ),
           Positioned(
             top: 56,
             child: Container(
