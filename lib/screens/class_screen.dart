@@ -17,7 +17,7 @@ class ClassScreen extends StatelessWidget {
             ),
           ),
           Container(
-            color: Colors.black45,
+            color: const Color(0xffA1A1A1).withOpacity(.5),
           ),
         ],
       ),
