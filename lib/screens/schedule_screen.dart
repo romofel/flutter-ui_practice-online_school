@@ -20,7 +20,7 @@ class ScheduleScreen extends StatelessWidget {
             child: SafeArea(
               child: Column(
                 children: [
-                  Row(
+                  Stack(
                     children: [
                       Container(
                         decoration: BoxDecoration(
@@ -32,25 +32,28 @@ class ScheduleScreen extends StatelessWidget {
                           onPressed: () => Navigator.of(context).pop(),
                         ),
                       ),
-                      Column(
-                        children: [
-                          Text(
-                            'UI/UX Design Class',
-                            style: GoogleFonts.lexendExa(
-                              color: const Color(0xff260404),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
+                      Align(
+                        alignment: AlignmentDirectional.center,
+                        child: Column(
+                          children: [
+                            Text(
+                              'UI/UX Design Class',
+                              style: GoogleFonts.lexendExa(
+                                color: const Color(0xff260404),
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'Schedule',
-                            style: GoogleFonts.lexendExa(
-                              color: const Color(0xff260404),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
+                            Text(
+                              'Schedule',
+                              style: GoogleFonts.lexendExa(
+                                color: const Color(0xff260404),
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   ),
