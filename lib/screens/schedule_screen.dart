@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:online_school/data/teachers.dart';
+import 'package:online_school/models/teacher.dart';
 
 class ScheduleScreen extends StatelessWidget {
   const ScheduleScreen({Key? key}) : super(key: key);
@@ -10,10 +12,18 @@ class ScheduleScreen extends StatelessWidget {
       body: Column(
         children: [
           _buildTopSection(context),
-          Expanded(
-            child: ListView(),
-          ),
+          _buildInstructorListSection(),
         ],
+      ),
+    );
+  }
+
+  Expanded _buildInstructorListSection() {
+    return Expanded(
+      child: ListView(
+        children: teachers.map<Row>((Teacher teacher) {
+          return Row();
+        }).toList(),
       ),
     );
   }
