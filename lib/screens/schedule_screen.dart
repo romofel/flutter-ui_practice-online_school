@@ -22,8 +22,12 @@ class ScheduleScreen extends StatelessWidget {
                   Row(
                     children: [
                       Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                         child: IconButton(
-                          icon: Icon(Icons.arrow_back_ios),
+                          icon: Icon(Icons.chevron_left, size: 32),
                           onPressed: () => Navigator.of(context).pop(),
                         ),
                       ),
