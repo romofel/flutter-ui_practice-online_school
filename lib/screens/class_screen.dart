@@ -146,7 +146,11 @@ class ClassScreen extends StatelessWidget {
           ),
           Column(
             children: [
-              _buildChatHistoryMessage(),
+              _buildChatHistoryMessage(
+                image: 'assets/images/chat_avatar1.png',
+                name: 'Nima Rane',
+                message: 'hi',
+              ),
             ],
           ),
         ],
@@ -154,17 +158,21 @@ class ClassScreen extends StatelessWidget {
     );
   }
 
-  Row _buildChatHistoryMessage() {
+  Row _buildChatHistoryMessage({
+    required String image,
+    required String name,
+    required String message,
+  }) {
     return Row(
       children: [
-        const Image(
-          image: AssetImage('assets/images/chat_avatar1.png'),
+        Image(
+          image: AssetImage(image),
           fit: BoxFit.cover,
         ),
         Column(
           children: [
             Text(
-              'Nima Rane',
+              name,
               style: GoogleFonts.lexendExa(
                 color: Colors.white,
                 fontSize: 14,
@@ -172,7 +180,7 @@ class ClassScreen extends StatelessWidget {
               ),
             ),
             Text(
-              'Hi',
+              message,
               style: GoogleFonts.lexendExa(
                 color: Colors.white.withOpacity(.6),
                 fontSize: 11,
