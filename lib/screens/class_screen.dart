@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ClassScreen extends StatelessWidget {
   const ClassScreen({Key? key}) : super(key: key);
@@ -41,6 +42,27 @@ class ClassScreen extends StatelessWidget {
                     image: AssetImage('assets/images/avatar.png'),
                     fit: BoxFit.cover,
                   ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Miss Seraphina',
+                      style: GoogleFonts.lexendExa(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      'UI/UX Instructor',
+                      style: GoogleFonts.lexendExa(
+                        color: Colors.black.withOpacity(.6),
+                        fontSize: 11,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
