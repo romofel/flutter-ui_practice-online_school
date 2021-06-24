@@ -8,7 +8,15 @@ class ScheduleScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(),
+          Container(
+            height: 200,
+            decoration: BoxDecoration(
+              color: const Color(0xff00BBC7).withOpacity(.1),
+              borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(32),
+                  bottomRight: Radius.circular(32)),
+            ),
+          ),
           Expanded(
             child: ListView(),
           ),
