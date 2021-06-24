@@ -158,8 +158,8 @@ class ClassScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   _buildChatHistoryMessage(
-                    image: 'assets/images/chat_avatar2.png',
-                    name: 'Arafat Hossen',
+                    image: 'assets/images/chat_avatar1.png',
+                    name: 'Nima Rane',
                     message: 'How are you?',
                   ),
                   const SizedBox(height: 16),
