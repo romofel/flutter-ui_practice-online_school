@@ -30,7 +30,8 @@ class ClassScreen extends StatelessWidget {
           ),
           Positioned(
             top: 56,
-            child: Padding(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
               padding: const EdgeInsets.all(24),
               child: Row(
                 children: [
@@ -44,6 +45,7 @@ class ClassScreen extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
+                  const SizedBox(width: 8),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -65,6 +67,7 @@ class ClassScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  const Spacer(),
                   Container(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
