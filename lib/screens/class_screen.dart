@@ -146,25 +146,28 @@ class ClassScreen extends StatelessWidget {
           ),
           Positioned(
             bottom: 136,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _buildChatHistoryMessage(
-                  image: 'assets/images/chat_avatar1.png',
-                  name: 'Nima Rane',
-                  message: 'hi',
-                ),
-                _buildChatHistoryMessage(
-                  image: 'assets/images/chat_avatar2.png',
-                  name: 'Arafat Hossen',
-                  message: 'How are you?',
-                ),
-                _buildChatHistoryMessage(
-                  image: 'assets/images/chat_avatar3.png',
-                  name: 'Mis Sume',
-                  message: 'Hello!',
-                ),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.only(left: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _buildChatHistoryMessage(
+                    image: 'assets/images/chat_avatar1.png',
+                    name: 'Nima Rane',
+                    message: 'hi',
+                  ),
+                  _buildChatHistoryMessage(
+                    image: 'assets/images/chat_avatar2.png',
+                    name: 'Arafat Hossen',
+                    message: 'How are you?',
+                  ),
+                  _buildChatHistoryMessage(
+                    image: 'assets/images/chat_avatar3.png',
+                    name: 'Mis Sume',
+                    message: 'Hello!',
+                  ),
+                ],
+              ),
             ),
           ),
         ],
@@ -178,6 +181,7 @@ class ClassScreen extends StatelessWidget {
     required String message,
   }) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Image(
           image: AssetImage(image),
