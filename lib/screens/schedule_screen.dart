@@ -25,7 +25,13 @@ class ScheduleScreen extends StatelessWidget {
           return Row(
             children: [
               // Stack(),
-              // Column(),
+              Column(
+                children: [
+                  Text('${teacher.title} ${teacher.badge} Badge'),
+                  Text('By ${teacher.name}'),
+                  Text('${teacher.start} - ${teacher.end}')
+                ],
+              ),
               GestureDetector(
                 child: Container(
                   padding:
