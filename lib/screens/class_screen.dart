@@ -101,6 +101,26 @@ class ClassScreen extends StatelessWidget {
               ),
             ),
           ),
+          const Positioned(
+            bottom: 24,
+            left: 0,
+            right: 0,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Say Something...',
+                  prefix: Image(
+                    image: AssetImage('assets/images/smiley.png'),
+                    fit: BoxFit.cover,
+                    height: 48,
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
