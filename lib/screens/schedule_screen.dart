@@ -23,6 +23,7 @@ class ScheduleScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Stack(
+                      alignment: AlignmentDirectional.bottomStart,
                       children: [
                         Container(
                           decoration: BoxDecoration(
@@ -30,7 +31,7 @@ class ScheduleScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: IconButton(
-                            icon: Icon(Icons.chevron_left, size: 32),
+                            icon: const Icon(Icons.chevron_left, size: 32),
                             onPressed: () => Navigator.of(context).pop(),
                           ),
                         ),
@@ -60,6 +61,7 @@ class ScheduleScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 16),
                   _buildWeekdays(),
                 ],
               ),
