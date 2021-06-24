@@ -27,6 +27,7 @@ class ScheduleScreen extends StatelessWidget {
             children: [
               // Stack(),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('${teacher.title} ${teacher.badge} Badge',
                       style: GoogleFonts.lexendExa(
