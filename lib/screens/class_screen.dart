@@ -26,7 +26,25 @@ class ClassScreen extends StatelessWidget {
               width: double.infinity,
               fit: BoxFit.cover,
             ),
-          )
+          ),
+          Positioned(
+            top: 56,
+            left: 24,
+            child: Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xffC4C4C4),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Image(
+                    image: AssetImage('assets/images/avatar.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
