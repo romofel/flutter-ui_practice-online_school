@@ -28,9 +28,25 @@ class ScheduleScreen extends StatelessWidget {
               // Stack(),
               Column(
                 children: [
-                  Text('${teacher.title} ${teacher.badge} Badge'),
-                  Text('By ${teacher.name}'),
-                  Text('${teacher.start} - ${teacher.end}')
+                  Text('${teacher.title} ${teacher.badge} Badge',
+                      style: GoogleFonts.lexendExa(
+                        color: Colors.black.withOpacity(.6),
+                        fontSize: 11,
+                        fontWeight: FontWeight.w400,
+                      )),
+                  Text('By ${teacher.name}',
+                      style: GoogleFonts.lexendExa(
+                        color: Colors.black,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w500,
+                      )),
+                  Text(
+                      '${teacher.start?.toStringAsFixed(2)} - ${teacher.end?.toStringAsFixed(2)}',
+                      style: GoogleFonts.lexendExa(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ))
                 ],
               ),
               GestureDetector(
