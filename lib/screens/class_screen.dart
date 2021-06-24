@@ -5,6 +5,15 @@ class ClassScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/classbackground.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+    );
   }
 }
