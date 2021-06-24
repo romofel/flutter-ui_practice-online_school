@@ -101,22 +101,35 @@ class ClassScreen extends StatelessWidget {
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             bottom: 24,
             left: 0,
             right: 0,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 24),
               child: TextField(
+                autofocus: true,
                 decoration: InputDecoration(
                   hintText: 'Say Something...',
-                  prefix: Image(
+                  hintStyle: GoogleFonts.lexendExa(
+                    color: Colors.black.withOpacity(.6),
+                    fontSize: 11,
+                    fontWeight: FontWeight.w400,
+                  ),
+                  isDense: true,
+                  prefixIcon: const Image(
                     image: AssetImage('assets/images/smiley.png'),
                     fit: BoxFit.cover,
-                    height: 48,
+                    height: 8,
                   ),
+                  contentPadding: const EdgeInsets.all(24),
                   filled: true,
-                  fillColor: Colors.white,
+                  fillColor: const Color(0xffCACACA).withOpacity(.8),
+                  isCollapsed: true,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide.none,
+                  ),
                 ),
               ),
             ),
