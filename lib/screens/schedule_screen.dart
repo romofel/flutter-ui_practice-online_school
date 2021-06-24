@@ -21,7 +21,8 @@ class ScheduleScreen extends StatelessWidget {
   Expanded _buildInstructorListSection() {
     return Expanded(
       child: ListView(
-        children: teachers.map<Row>((Teacher teacher) {
+        children:
+            teachers.getRange(3, teachers.length).map<Row>((Teacher teacher) {
           return Row(
             children: [
               // Stack(),
